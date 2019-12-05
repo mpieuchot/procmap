@@ -61,7 +61,7 @@ int
 main(int argc, char **argv)
 {
 	pid_t pid = -1;
-	int rc, ch;
+	int ch, rc = 0;
 
 	while ((ch = getopt(argc, argv, "aPp:s")) != -1) {
 		switch (ch) {
@@ -88,7 +88,9 @@ main(int argc, char **argv)
 	if (pid == -1 && argc == 0)
 		pid = getppid();
 
-	rc = dump(pid);
+	if (pid != -1)
+		rc = dump(pid);
+
 	while (rc == 0 && argc > 0) {
 		pid = (pid_t)strtonum(argv[0], 0, UINT_MAX, NULL);
 		argv++;
