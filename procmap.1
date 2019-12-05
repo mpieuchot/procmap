@@ -1,0 +1,33 @@
+.\"	$OpenBSD: ctfdump.1,v 1.4 2017/10/17 22:47:58 schwarze Exp $
+.\"
+.\" Copyright (c) 2019 Martin Pieuchot <mpi@openbsd.org>
+.\"
+.\" Permission to use, copy, modify, and distribute this software for any
+.\" purpose with or without fee is hereby granted, provided that the above
+.\" copyright notice and this permission notice appear in all copies.
+.\"
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+.\" WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+.\" ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+.\" WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+.\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+.\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+.\"
+.Dd $Mdocdate: December 5 2019 $
+.Dt PROCMAP 1
+.Os
+.Sh NAME
+.Nm procmap
+.Nd list process memory mappings
+.Sh SYNOPSIS
+.Nm procmap
+.Op Fl aPs
+.Op Fl p Ar pid
+.Op Ar pid ...
+.Sh DESCRIPTION
+The
+.Nm
+utility displays virtual memory mapping.
+.Sh AUTHORS
+.An Martin Pieuchot Aq Mt mpi@openbsd.org
